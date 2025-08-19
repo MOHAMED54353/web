@@ -1,0 +1,61 @@
+/* -----------------------------------------------------------section------------------------------------------------------------------- */
+
+body{
+    background-color: #1e1c2a;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Prompt', sans-serif;}
+.lohea{
+    color: white;
+    font-size: 35px;
+    text-align: center;}
+.lofff{
+    width: 280px;
+    height: 7px;
+    background-color: #ff702a;
+    border-radius: 50px;
+    position: absolute;
+    top: 32%;
+    left: 20%;}
+.lomeddi{
+    background-color: black;
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 50%;
+    margin-left: -225px;
+    margin-top: 115px;}
+.loem,.loph{
+    position: absolute;
+    width: 200px;
+    height: auto;
+    padding: 12px;
+    border: 4px #1e1c2a solid;
+    border-radius: 60px;
+    background-color: black;
+    color: white;}
+.loem{
+    top: 43%;
+    left: 25%;}
+.loph{
+    top: 57%;
+    left: 25%;}
+.logbu{
+    text-decoration: none;
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    width: 230px;
+    height: auto;
+    padding: 16px;
+    border: 4px  #ff702a solid;
+    border-radius: 60px;
+    background-color: #ff702a;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;}
+h1{
+    font-size: 70px;}
+

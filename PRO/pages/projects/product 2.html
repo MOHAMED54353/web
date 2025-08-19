@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="file.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"rel="stylesheet">
+</head>
+<body>
+
+
+<!-----------------------------------------------------------header------------------------------------------------------------------->
+
+<header id="header">
+  <div class="header">
+      <a><img class="logo" src="Images/Logo 1/22040413.jpg"> </a>
+      <a><p class="ff">Fashion Five</p></a>
+      <p class="num1"><a href="https://www.Whatsapp.com/">01200013247</a></p>
+      <p class="num1"><a href="https://www.Gmail.com/">fashion5@gmail.com</a></p>
+      <div class="header-right">
+          <a href="register.html" class="zz1"> Register </a>
+          <a href="login.html" class="zz2"> Login </a>
+          <a href="#https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+          <a href="https://www.Whatsapp.com/"><i class="fa fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+          <a href="profile.html"><i class="fa fa-user-circle"></i></a>
+      </div>
+  </div>
+</header>
+
+<!----------------------------------------------------------Nav-------------------------------------------------------------------------->
+
+<nav id="navegation">
+  <div class="nav">
+      <div><a href=" home.html" class="home">Home</a></div>
+      <div><a href="products.html" class="products">Products</a></div>
+      <div><a href="contact.html" class="contact">Contact</a></div>
+      <div><a href="cart.html" class="cart">Cart</a></div>
+  </div>
+</nav>
+
+
+<!----------------------------------------------------------section-------------------------------------------------------------------------->
+<section >
+<main class="container" id="section">
+
+        <!-- Left Column / shirt Image -->
+        <div class="left-column">
+          <img data-image="white" src="images/Design 3/hoodie.1.png" alt="">
+          <img data-image="black" class="active" src="images/Design 2/hoodie.1.png" alt="">
+        </div>
+  
+  
+        <!-- Right Column -->
+        <div class="right-column">
+  
+          <!-- Product Description -->
+          <div class="product-description">
+            <span>T-Shirts</span>
+            <h1>Hoodie Simple</h1>
+            <p>This premium Hoodie is as close to perfect as can be. It's optimized for all types of print and will quickly become your favorite T-shirt. Soft, comfortable and durable, this is a definite must-own.
+              Brand: 
+              100% cotton (heather gray and heather ice blue are 95% cotton /5% viscose. Heather blue & charcoal gray are 80% cotton/20% polyester. Heather burgundy is 60% cotton/40% polyester. Heather oatmeal is 99% cotton/1% viscose) | Fabric Weight: 4.42 oz (lightweight)
+              Wide range of sizes from S-5XL
+              Fairly produced, certified and triple audited.
+              Double stitched, reinforced seams at shoulder, sleeve, collar and waist
+              Optimized for beautiful brilliance across all printing methods
+              Imported</p>
+          </div>
+  
+          <!-- Product Configuration -->
+          <div class="product-configuration">
+  
+            <!-- Product Color -->
+            <div class="product-color">
+              <span>Color</span>
+  
+              <div class="color-choose">
+             
+                <div>
+                  <input data-image="white" type="radio" id="white" name="color" value="white" checked>
+                  <label for="white"><span></span></label>
+                </div>
+                <div>
+                  <input data-image="black" type="radio" id="black" name="color" value="black">
+                  <label for="black"><span></span></label>
+                </div>
+              </div>
+  
+            </div>
+  
+            <!-- Cable Configuration -->
+            <div class="cable-config">
+              <span>Size</span>
+  
+              <div class="cable-choose">
+                <button>Short</button>
+                <button>Medium</button>
+                <button>Long</button>
+              </div>
+  
+              <a href="#">How to know which model is right fore you</a>
+            </div>
+          </div>
+  
+          <div class="product-price">
+            <span>19.99$</span>
+            <a href="cart.html" onclick="addToCart()" class="cart-btn">Add to cart</a>
+
+          </div>
+          <div class="wrapper">
+            <span class="minus">-</span>
+            <span class="num">01</span>
+            <span class="plus">+</span>
+          </div>
+          <script>
+            const plus = document.querySelector(".plus");
+            minus = document.querySelector(".minus");
+            num = document.querySelector(".num");
+
+            let a = 1;
+
+            plus.addEventListener("click", ()=>{
+              a++;
+              a = (a<10) ? "0" + a : a;
+              num.innerText = a;
+              console.log(a);
+            });
+
+            minus.addEventListener("click", ()=>{
+              if(a > 1){
+                a--;
+                a = (a<10) ? "0" + a : a;
+                num.innerText = a;
+              }
+            });
+            
+            function addToCart() {
+              // Get product details
+              var productName = "Hoodie Simple";
+              var productImage = "images/Design 3/hoodie.1.png";
+              var productSize = " Size : M / L";
+              var productPrice = " Price 19.99";
+              var productbutton = "Click To Buy"
+
+              // Get existing cart items from local storage or initialize an empty array
+              var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+              // Add the current product to the cart
+              var product = {
+                name: productName,
+                image: productImage,
+                size: productSize,
+                price: productPrice,
+                button :productbutton
+
+              };
+              cartItems.push(product);
+
+              // Save the updated cart back to local storage
+              localStorage.setItem('cart', JSON.stringify(cartItems));
+
+            }
+          </script>
+        </div>
+      </main>
+  
+      <!-- Scripts -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" charset="utf-8"></script>
+      <script src="script.js" charset="utf-8"></script>
+  </section>
+
+<!-----------------------------------------------------------aside------------------------------------------------------------------------->
+
+<aside id="aside">    
+  <form action="#home" method="get">
+      <div class="sidebar">
+          <a class="tooltip">
+          <i class="fa fa-whatsapp"></i> 
+          <span class="tooltiptext">WhatsApp<input type="text"placeholder="Enter message"> 
+          <button type="submit" formaction="https://www.WhatsApp.com/"target="_blank">Send </button></span></a>
+          <a class="tooltip">
+          <i class="fa fa-instagram"></i>
+          <span class="tooltiptext">Instagram<input type="text"placeholder="Enter message">
+          <button type="submit" formaction="https://www.instagram.com/"target="_blank">Send</button></span></a>
+          <a class="tooltip">
+          <i class="fa fa-linkedin"></i> 
+          <span class="tooltiptext">linkedin<input type="text"placeholder="Enter message"> 
+          <button type="submit" formaction="https://www.linkedin.com/"target="_blank">Send</button></span></a>
+          <a class="tooltip">
+          <i class="fa fa-google"></i>
+          <span class="tooltiptext">Gmail<input type="text" placeholder="Enter message"> 
+          <button type="submit" formaction="https://www.gmail.com/"target="_blank">Send</button></span></a>
+      </div>
+  </form>
+</aside>
+
+<!-----------------------------------------------------------footer------------------------------------------------------------------------->
+
+<footer id="footer" class="footer">
+  <div class="line"></div>
+      <div class="main">
+          <div class="col">
+              <h4>Pages</h4>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="products.html">Products</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="cart.html">Cart</a></li>
+                  <li><a href="profile.html">Profile</a></li>
+              </ul>
+          </div>
+          <div class="col">
+              <h4>Our Services</h4>
+              <ul>
+                  <li><a href="#header">Header</a></li>
+                  <li><a href="#navegation">Navegation</a></li>
+                  <li><a href="#section">Section</a></li>
+                  <li><a href="#aside">Aside</a></li>
+                  <li><a href="#footer">Footer</a></li>
+              </ul>
+          </div>
+          <div class="col">
+              <h4>Contact Us</h4>
+              <ul>
+                  <li><a href="https://www.WhatsApp.com/">01280034567</a></li>
+                  <li><a href="https://www.WhatsApp.com/">01295678394</a></li>
+                  <li><a href="https://www.WhatsApp.com/">01229846573</a></li>
+                  <li><a href="https://www.WhatsApp.com/">01298746554</a></li>
+                  <li><a href="https://www.WhatsApp.com/">01233647589</a></li>
+              </ul>
+          </div>
+          <div class="col">
+              <h4>Information</h4>
+              <div class="social">
+                  <a href="https://www.google.com/"><i class='fa fa-google'></i></a>
+                  <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                  <a href="https://www.linkedin.com/"><i class='bx bxl-linkedin'></i></a>
+                  <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                  <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+              </div>
+          </div>
+      </div>
+</footer>
+
+</body>
+</html>

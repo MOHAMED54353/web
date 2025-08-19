@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Login</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <!-----------------------------------------------------------section------------------------------------------------------------------->
+
+    <section>
+      <form method="POST" id="registrationForm">
+        <div class="lomeddi">
+          <div class="lohea"><h1>Login</h1></div>
+          <div class="lofff"></div>
+          <input
+            class="loem"
+            id="username"
+            type="email"
+            placeholder="    Email"
+            required
+          />
+          <input
+            class="loph"
+            id="password"
+            type="password"
+            placeholder="    Password"
+            required
+            minlength="8"
+            maxlength="12"
+          />
+          <button class="logbu" type="button" onclick="validateAndRedirect()">
+            LOGIN
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script>
+      function validateAndRedirect() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        if (username !== "" && password !== "") {
+          window.location.href = "home.html";
+        } else {
+          alert("Please Enter All Required Data");
+        }
+      }
+    </script>
+  </body>
+</html>

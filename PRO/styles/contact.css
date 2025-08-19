@@ -1,0 +1,293 @@
+/* ------------------------------------------------------------------section-------------------------------------------------------------- */
+
+body {
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+  .path{
+    position: relative;}
+  .hop{
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 12px;
+    background-color: #ff702a;}
+.path .hop span{
+    color: #1e1c2a;}
+  .Contact{
+  padding: 80px;
+  padding-left: 150px;
+  margin: 0px auto;}
+.contact-wrapper{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;}
+.contact-form h3{
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #ff702a;}
+.form-group{
+  margin-bottom: 20px;}
+input, textarea{
+  width:100%;
+  padding: 12px;
+  border-radius: 8px;
+  border:none;
+  background-color: #fff;}
+button{
+  padding: 12px 24px;
+  background-color: #ff702a;
+  color: white;
+  font-size: 25px;
+  border:none;
+  border-radius: 12px;
+  cursor: pointer;}
+button:hover{
+  background-color: #45a049;}
+.contact-info h3{
+  font-size: 30px;
+  margin-left: 110px;
+  margin-bottom: 20px;
+  color:#ff702a;}
+.contact-info i{
+  margin-left: 90px;
+  color: #ff702a;
+  margin-right: 10px;}
+.map{
+  width: 92%;
+  margin-left: 5%;
+  height: 800px;
+  border-radius: 12px;
+  border: 5px #ff702a solid;}
+
+/* ------------------------------------------------------------aside----------------------------------------------------------------- */
+
+.sidebar {
+  height: 170px;
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  border-radius: 10px;
+  background-color: black;
+  padding-top: 30px;
+  margin-top: 17%;}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;}
+.sidebar a:hover {
+  color: white;
+  table-layout: auto;}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  height: auto;
+  width: 180px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;  
+  z-index: 1;}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  position: fixed;}
+
+
+/* ------------------------------------------------------------aside----------------------------------------------------------------- */
+
+.sidebar {
+  height: 200px;
+  width: 50px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  border-radius: 10px;
+  background-color: #ff702a;
+  padding-top: 30px;
+  margin-top: 17%;}
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;}
+.sidebar a:hover {
+  color: white;
+  table-layout: auto;}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted #ff702a;}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  height: auto;
+  width: 180px;
+  background-color: #ff702a;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;  
+  z-index: 1;}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  position: fixed;}
+
+/* ------------------------------------------------------------header----------------------------------------------------------------- */
+
+.logo{
+  width: 40px;
+  height: 50px;
+  border-radius: 18px;
+  margin-top: -20px;}
+.ff{
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: -8px;}
+.num{
+  margin-top: -20px ;}
+.header-right {
+  box-sizing: border-box;}
+.header {
+  overflow: hidden;
+  background-color: #1e1c2a;
+  padding: 16px 10px;
+  height: 45px;}
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px; 
+  border-radius: 8px;
+  font-weight: bold;}
+.header a:hover {
+  background-color: #7b7a7a33;}
+.header-right {
+  float: right;}
+
+/* ------------------------------------------------------------nav----------------------------------------------------------------- */
+
+.contact{
+  color: #1e1c2a; 
+  text-decoration: none;
+  font-size: 20px;}
+.nav{
+  margin: -10px;
+  padding: 9px;
+  background-color: #1e1c2a;
+  display: flex;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;}
+.nav div{
+  background-color: #ff702a;
+  color: white;
+  width: 25%;
+  text-align: center;
+  padding: 15px;
+  border: 3px #1e1c2a solid;
+  border-radius: 12px;
+  font-weight: bold;}
+.products,.cart,.home{
+  color: white ;
+  text-decoration: none;
+  font-size: 20px;}
+
+/* ------------------------------------------------------------footer----------------------------------------------------------------- */
+
+
+.line{
+  width: 90%;
+  height: 6px;
+  position: absolute;
+  top: 1500px;
+  left: 5%;
+  background-color: #ff702a;
+  border-radius: 20px;}
+.main {
+  display: flex;
+  flex-wrap: wrap;}
+.footer {
+  margin-top: 50px;
+  padding: 10px 0;
+  margin-left: 60px;}
+.col {
+  width: 25%;}
+.col h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: 25px;
+  position: relative;}
+.col h4::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 50px;
+  left: 0;
+  bottom: -8px;
+  background: var(--main-color);}
+.col ul li:not(:last-child) {
+  margin-bottom: 15px;}
+.col ul li a {
+  color: #9897a9;
+  font-size: 1.1rem;
+  display: block;
+  text-transform: capitalize;
+  transform: 4s;}
+.col ul li a:hover {
+  color: var(--text-color);
+  transform: translateX(-12px);}
+.col .social {
+  width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;}
+.col .social a {
+  height: 40px;
+  width: 40px;
+  background: var(--main-color);
+  color: var(--text-color);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  transition: .4s;}
+.col .social a:hover {
+  transform: scale(1.2);
+  color: var(--big-color);
+  background: var(--text-color);}
+li,a,h4 {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;}
+:root {
+  --main-color: #ff702a;
+  --text-color: #fff;
+  --big-color: #1e1c2a;
+  --big-font: 5rem;
+  --h2-font: 2.25rem;
+  --p-fomt: 0.9rem;}
+*::selection {
+  background: var(--main-color);
+  color: #fff;}
+body {
+  color: var(--text-color);
+  background: var(--big-color);}
+h4{
+  margin-left: 40px;}

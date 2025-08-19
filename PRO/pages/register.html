@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../styles/register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Prompt:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form method="POST" id="registrationForm">
+      <div class="remeddi">
+        <div><p class="refff"></p></div>
+        <div class="reh1"><h1>Register</h1></div>
+        <input
+          class="refn"
+          id="username"
+          type="text"
+          placeholder=" Full Name"
+          required
+        />
+        <input
+          class="reem"
+          id="email"
+          type="email"
+          placeholder=" Email"
+          required
+        />
+        <input
+          class="reph"
+          id="phone"
+          type="text"
+          placeholder="  Phone number "
+          required
+        />
+        <input
+          class="relo"
+          id="location"
+          type="text"
+          placeholder=" Location "
+          required
+        />
+        <input
+          class="repa"
+          id="password"
+          type="password"
+          placeholder=" Enter password"
+          required
+          minlength="8"
+          maxlength="12"
+        />
+        <input
+          class="recp"
+          id="confirmPassword"
+          type="password"
+          placeholder=" Confirm password"
+          required
+          minlength="8"
+          maxlength="12"
+        />
+        <button class="rebu" type="button" onclick="validateAndRedirect()">
+          Register
+        </button>
+      </div>
+    </form>
+
+    <script>
+      function validateAndRedirect() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var phone = document.getElementById("location").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        if (
+          username !== "" &&
+          password !== "" &&
+          confirmPassword !== "" &&
+          email !== "" &&
+          phone !== "" &&
+          location !== ""
+        ) {
+          if (password === confirmPassword) {
+            window.location.href = "login.html";
+          } else {
+            alert("Please Verify Your Password");
+          }
+        } else {
+          alert("Please Enter All Required Data");
+        }
+      }
+
+      let firstNameField = document.getElementById("fname");
+      let lastNameField = document.getElementById("lname");
+      let userNameField = document.getElementById("username");
+      let emailField = document.getElementById("email");
+      let PasswordField = document.getElementById("password");
+      let signUpButton = document.getElementById("sign-up");
+      var alertt = false;
+
+      function addDataToLocalStorage() {
+        if (localStorage.getItem(emailField.value + "email")) {
+          alert(
+            "there is another user with the same email , choose another one"
+          );
+          alertt = false;
+        } else {
+          localStorage.setItem(
+            emailField.value + "fname",
+            firstNameField.value
+          );
+          localStorage.setItem(emailField.value + "lname", lastNameField.value);
+          localStorage.setItem(
+            emailField.value + "username",
+            userNameField.value
+          );
+          localStorage.setItem(emailField.value + "email", emailField.value);
+          localStorage.setItem(
+            emailField.value + "password",
+            PasswordField.value
+          );
+          alertt = true;
+        }
+        return alertt;
+      }
+    </script>
+  </body>
+</html>
